@@ -47,7 +47,10 @@
     <record model="ir.ui.view" id="view_bank_statement_form">
         <field name="name">account.bank.statement.form.state</field>
         <field name="model">account.bank.statement</field>
-        <field name="inherit_id" ref="account_statement_base.view_bank_statement_form" />
+        <field
+            name="inherit_id"
+            ref="account_statement_base.view_bank_statement_form"
+        />
         <field name="arch" type="xml">
             <xpath expr='//sheet' position="before">
                 <header>
@@ -60,17 +63,14 @@
                         states="open"
                     />
 
-                    <field
-                        name="state"
-                        widget="statusbar"
-                    />
+                    <field name="state" widget="statusbar" />
                 </header>
             </xpath>
             <xpath expr="//form" position="inside">
                 <div class="oe_chatter">
-                    <field name="message_follower_ids" groups="base.group_user"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids"/>
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
                 </div>
             </xpath>
         </field>
